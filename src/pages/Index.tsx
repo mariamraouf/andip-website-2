@@ -8,11 +8,33 @@ import {
   Star, 
   Calendar, 
   Users, 
-  Compass, 
+  Compass,
   Instagram, 
   MessageSquare, 
   Mail
 } from "lucide-react";
+
+// Custom Mountain Logo Component to match the image exactly
+const MountainLogo = () => (
+  <div className="flex items-center gap-3">
+    <div className="bg-[#10b981] text-slate-950 p-2.5 rounded-2xl flex items-center justify-center shadow-sm">
+      <svg 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        strokeWidth="2.5" 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        className="h-6 w-6 text-slate-950"
+      >
+        <path d="M4 18 L9 7 L12 12 L15 9 L19 18 Z" />
+      </svg>
+    </div>
+    <span className="font-black text-2xl tracking-tight text-slate-900 flex items-center">
+      ANDIP<span className="text-[#10b981]">!</span>
+    </span>
+  </div>
+);
 
 export default function Index() {
   // Scroll to section helper
@@ -78,13 +100,8 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <div className="bg-emerald-500 text-white p-2 rounded-xl">
-              <Compass className="h-6 w-6" />
-            </div>
-            <span className="font-black text-2xl tracking-tight text-slate-900">
-              ANDIP<span className="text-emerald-500">!</span>
-            </span>
+          <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <MountainLogo />
           </div>
 
           {/* Navigation Links */}
@@ -476,13 +493,25 @@ export default function Index() {
       <footer className="bg-slate-950 text-white border-t border-white/10 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="bg-emerald-500 text-white p-2 rounded-xl">
-              <Compass className="h-5 w-5" />
+          <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <div className="flex items-center gap-3">
+              <div className="bg-[#10b981] text-slate-950 p-2.5 rounded-2xl flex items-center justify-center shadow-sm">
+                <svg 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2.5" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  className="h-6 w-6 text-slate-950"
+                >
+                  <path d="M4 18 L9 7 L12 12 L15 9 L19 18 Z" />
+                </svg>
+              </div>
+              <span className="font-black text-xl tracking-tight text-white flex items-center">
+                ANDIP<span className="text-[#10b981]">!</span>
+              </span>
             </div>
-            <span className="font-black text-xl tracking-tight">
-              ANDIP<span className="text-emerald-500">!</span>
-            </span>
           </div>
 
           {/* Links */}
